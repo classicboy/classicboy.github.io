@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>Ảnh</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "style.css">
+</head>
+
+<body>
+	<div class="main">	
+		<div class= "cau mot">
+			<p class= "question"> Bố mẹ có sáu người con trai, mỗi người con trai có một em gái. Gia đình đó có bao người </p>
+			<div class="nut"> <input  type= "radio" name= "dapan1" value= "A" onclick= "cau1()"><label style="font-size: 30px; font-weight:bold">A. 9 </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan1" value= "B" onclick= ""><label style="font-size: 30px; font-weight:bold">B. 11 </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan1" value= "C" onclick= ""><label style="font-size: 30px; font-weight:bold">C. 14 </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan1" value= "D" onclick= ""><label style="font-size: 30px; font-weight:bold">D. 12 </label></div>
+		</div>
+
+		<div class= "cau hai">
+			<p class= "question"> Vệ tinh lớn nhất của sao Mộc </p>
+			<div class="nut"> <input  type= "radio" name= "dapan2" value= "A" onclick= "cau2()"><label style="font-size: 30px; font-weight:bold">A. Ganymede</label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan2" value= "B" onclick= ""><label style="font-size: 30px; font-weight:bold">B. Callisto</label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan2" value= "C" onclick= ""><label style="font-size: 30px; font-weight:bold">C. Io</label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan2" value= "D" onclick= ""><label style="font-size: 30px; font-weight:bold">D. Europa</label></div>
+		</div>
+
+		<div class= "cau ba">
+			<p class= "question"> Quasimodo là nhân vật trong tiểu thuyết nào </p>
+			<div class="nut"> <input  type= "radio" name= "dapan3" value= "A" onclick= ""><label style="font-size: 30px; font-weight:bold">A. Những người khốn khổ </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan3" value= "B" onclick= ""><label style="font-size: 30px; font-weight:bold">B. Ba chàng lính ngự lâm </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan3" value= "C" onclick= ""><label style="font-size: 30px; font-weight:bold">C.Trà hoa nữ </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan3" value= "D" onclick= "cau3()"><label style="font-size: 30px; font-weight:bold">D. Nhà thờ Đức bà Paris </label></div>
+		</div>
+
+		<div class= "cau bon">
+			<p class= "question"> Ai là người đầu tiên nêu ra thuyết Nhật tâm </p>
+			<div class="nut"> <input  type= "radio" name= "dapan4" value= "A" onclick= "cau4()"><label style="font-size: 30px; font-weight:bold">A. Nicolaus Copernicus </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan4" value= "B" onclick= ""><label style="font-size: 30px; font-weight:bold">B. Isaac Newton </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan4" value= "C" onclick= ""><label style="font-size: 30px; font-weight:bold">C. Leonardo da Vinci </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan4" value= "D" onclick= ""><label style="font-size: 30px; font-weight:bold">D. Galileo Galilei </label></div>
+		</div>
+
+		<div class= "cau nam">
+			<p class= "question"> Stalingrad nay là thành phố nào </p>
+			<div class="nut"> <input  type= "radio" name= "dapan5" value= "A" onclick= ""><label style="font-size: 30px; font-weight:bold">A. Leningrad </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan5" value= "B" onclick= ""><label style="font-size: 30px; font-weight:bold">B. Novosibirsk </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan5" value= "C" onclick= "cau5()"><label style="font-size: 30px; font-weight:bold">C. Volgograd </label></div>
+			<div class="nut"> <input  type= "radio" name= "dapan5" value= "D" onclick= ""><label style="font-size: 30px; font-weight:bold">D. Sevastopol </label></div>
+		</div>
+
+		<div class= "cau sau">
+			<p class= "question"> Cầu thủ có biệt danh  Il Fenomeno Vero</p>
+			<div class="nut"> <input type= "radio" name= "dapan6" value= "A" onclick= ""><label style="font-size: 30px; font-weight:bold">A. Ronaldo de Lima </label></div>
+			<div class="nut"> <input type= "radio" name= "dapan6" value= "B" onclick= "cau6()"><label style="font-size: 30px; font-weight:bold">B. Alessandro Del Piero </label></div>
+			<div class="nut"> <input type= "radio" name= "dapan6" value= "C" onclick= ""><label style="font-size: 30px; font-weight:bold">C. Gabriel Batistuta </label></div>
+			<div class="nut"> <input type= "radio" name= "dapan6" value= "D" onclick= ""><label style="font-size: 30px; font-weight:bold">D. Roberto Baggio </label></div>
+		</div>
+
+		<button id= "result" onclick= "ketqua()"> Xem ket qua </button> 
+
+	</div>
+
+	<script src="js/script.js"></script>
+
+
+</body>
+</html>

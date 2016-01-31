@@ -1,0 +1,145 @@
+<html>
+<head>
+	<title>Game</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="main">	
+		<div id= "card1" class= "card ">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card2" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card3" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card4" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card5" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card6" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card7" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card8" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card9" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+		<div id= "card10" class= "card">
+			<div class= "front">
+				<img class= "image" src= "">
+			</div>
+
+			<div class= "back">
+				<img class= "image" src= "img/dota.jpg">
+			</div>
+		</div>
+
+
+	</div>
+
+	<script>
+		$('.card .back').click( function(){
+			$(this).css('-webkit-transform','rotateY(180deg)')
+			$(this).css('transition-duration','0.5s')
+			$(this).css('backface-visibility','hidden')
+			$(this).prev().css('-webkit-transform','rotateY(0deg)')
+			$(this).prev().css('transition-duration','0.5s')
+			$(this).prev().css('cursor','default')
+
+			
+		})
+
+		var array = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jpg', 'img/06.jpg', 'img/07.jpg', 'img/08.jpg', 'img/09.jpg', 'img/10.jpg'  ];
+
+		function shuffle(array) {
+			var currentIndex = array.length, temporaryValue, randomIndex;
+			while (0 !== currentIndex) {
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			}
+			return array
+		}
+		shuffle(array)
+
+		$('.card').each(function(i,e) { 
+			$(this).find('.front img').attr("src",array[i])
+		})
+	</script>
+</body>
+</html>

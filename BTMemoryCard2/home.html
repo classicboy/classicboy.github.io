@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>Game</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="content">	
+		<audio autoplay controls loop>
+			<source src= "audio_basic.mp3" type="audio/mpeg"></source>
+		</audio>
+
+		<audio autoplay id="choose">
+		</source src= "" typle="audio/mpeg"></source>		
+	</audio>
+</div>
+<script>
+	var cards = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg', 'img/04.jpg', 'img/05.jpg', 'img/06.jpg', 'img/07.jpg', 'img/08.jpg', 'img/09.jpg', 'img/10.jpg', 'img/11.jpg', 'img/12.jpg', 'img/13.jpg', 'img/14.jpg', 'img/15.jpg', 'img/16.jpg','img/17.jpg','img/18.jpg'];
+	var current= null;
+	var count= 0;
+
+	var Time= 60;
+
+	function shuffle(array) {
+		var currentIndex = array.length, temporaryValue, randomIndex;
+		while (0 !== currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+		return array
+	}
+
+	function flip(card){
+		$(card).toggleClass('flipped');
+		$("#choose").attr("src","audio1.mp3");
+		$(card).css('pointer-events', 'none');
+		if(!current){
+			current= $(card)
+		}else{
+			if(current.attr('data-name') != $(card).attr('data-name')){
+				var abc = current;
+				current= null;
+
+				setTimeout(function(){
+					abc.toggleClass("flipped");
+					$(card).toggleClass("flipped");
+					$(card).css('pointer-events', 'auto');
+					abc.css('pointer-events', 'auto');
+				},500);
+				
+			}else{
+				var abc= current;
+				current= null;
+
+				setTimeout(function(){
+					abc.css('opacity','0');
+					$(card).css('opacity','0');
+					$("#choose").attr("src","audio.mp3");
+					$(card).css('pointer-events', 'auto');
+
+					count++;
+					if(count== 18){
+						alert("You win")
+					}
+				},500);
+			}
+		}
+	}
+
+
+	$(function() {
+		cards = cards.concat(cards);
+		cards = shuffle(cards);
+
+		var html = '';
+		for (var i=0; i<cards.length; i++){
+			html += '<div class= "grid">' +
+			'<div class= "card" data-name= "' +cards[i]+ '" onclick= "flip(this)">' + 
+			'<div class= "front"><img src=" '+cards[i]+' "/></div>' +
+			'<div class= "back"><img src= "img/dota.jpg"/></div>' +
+			'</div></div>'
+		};
+		$('.content').append(html);
+	});
+
+	var run = setInterval (function(){
+		Time--;
+		console.log(Time);
+
+		if(Time== 0){
+			clearInterval(run);
+		}
+	},1000);
+
+</script>
+</body>
+</html>

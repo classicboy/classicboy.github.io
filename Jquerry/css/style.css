@@ -1,0 +1,76 @@
+﻿body{
+	box-sizing: border-box;
+	max-width: 1400px;
+	height: 600px;
+	margin: auto;
+	background-image: url("../img/theme1.jpg")
+
+}
+#theme{
+	position: fixed;
+	top: 100px;
+	left: 50px;
+	padding:0;
+	z-index: 2;
+}
+#theme img{
+	width: 50px;
+	height: 50px;
+}
+.main{
+	max-width: 100%;
+	margin-top:50px;
+
+}
+
+.cau{
+	border: 1px solid green;
+	border-radius: 20px;
+	width: 700px;
+	height: 70%;
+	margin: auto;
+	position: relative;
+	background-color: #212821;
+	opacity: 0.5;
+}
+.cau:hover{
+	opacity: 1;
+}
+
+.question{
+	height: 25%;
+	margin-top: 100px;
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #2BC12B;
+}
+
+.answers{
+	margin-left: 50px;
+	margin-right: 50px;
+
+}
+.nut button{
+	width: 45%;
+	height: 60px;
+	font-size: 20px;
+	float: left;
+	margin: 10px;
+	color:white;
+	background-color: #00308C;
+}
+
+.chuyen{
+	position: absolute;
+	top: 25px;
+	right: 50px;
+	padding:0;
+}
+
+.chuyen img{
+	width: 50px;
+	height: 50px;
+
+}

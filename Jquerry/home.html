@@ -1,0 +1,153 @@
+<html>
+<head>
+	<title>Ảnh</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="main">	
+
+		<button id= "theme" ><img src= "img/icon3.png"></button>
+		
+		<div class="cau" id= "cau1">
+			<p class= "question"> Bố mẹ có sáu người con trai, mỗi người con trai có một em gái. Gia đình đó có bao người </p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" class= "rightanswer">A. 9 </div>
+				<div class="nut"> <button value= "B" >B. 11 </button></div>
+				<div class="nut"> <button value= "C" >C. 14 </button></div>
+				<div class="nut"> <button value= "D" >D. 12 </button></div>
+			</div>
+
+			<button class= "chuyen" id="button1" ><img src="img/icon1.png"></button>
+		</div>
+
+		<div class="cau" id= "cau2" style= "display:none">
+			<p class= "question"> Vệ tinh lớn nhất của sao Mộc </p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" class= "rightanswer">A. Ganymede</div>
+				<div class="nut"> <button value= "B" >B. Callisto</button></div>
+				<div class="nut"> <button value= "C" >C. Io</button></div>
+				<div class="nut"> <button value= "D" >D. Europa</button></div>
+			</div>
+
+			<button class= "chuyen" id="button2"><img src="img/icon1.png"></button>
+		</div>
+
+		<div class="cau" id= "cau3" style= "display:none">
+			<p class= "question"> Quasimodo là nhân vật trong tiểu thuyết nào </p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" >A. Những người khốn khổ </button></div>
+				<div class="nut"> <button value= "B" >B. Ba chàng lính ngự lâm </button></div>
+				<div class="nut"> <button value= "C" >C.Trà hoa nữ </button></div>
+				<div class="nut"> <button value= "D" class= "rightanswer" >D. Nhà thờ Đức bà Paris </button></div>
+			</div>
+
+			<button class= "chuyen" id="button3"><img src="img/icon1.png"></button>
+		</div>
+
+		<div class="cau" id= "cau4" style= "display:none">
+			<p class= "question"> Ai là người đầu tiên nêu ra thuyết Nhật tâm </p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" class= "rightanswer" >A. Nicolaus Copernicus </button></div>
+				<div class="nut"> <button value= "B" >B. Isaac Newton </button></div>
+				<div class="nut"> <button value= "C" >C. Leonardo da Vinci </button></div>
+				<div class="nut"> <button value= "D" >D. Galileo Galilei </button></div>
+			</div>
+
+			<button class= "chuyen" id="button4"><img src="img/icon1.png"></button>
+		</div>
+
+		<div class="cau" id= "cau5" style= "display:none">
+			<p class= "question"> Stalingrad nay là thành phố nào </p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" >A. Leningrad </button></div>
+				<div class="nut"> <button value= "B" >B. Novosibirsk </button></div>
+				<div class="nut"> <button value= "C" class= "rightanswer" >C. Volgograd </button></div>
+				<div class="nut"> <button value= "D" >D. Sevastopol </button></div>
+			</div>
+
+			<button class= "chuyen" id="button5"><img src="img/icon1.png"></button>
+		</div>
+
+		<div class="cau" id= "cau6" style= "display:none">
+			<p class= "question"> Cầu thủ có biệt danh  Il Fenomeno Vero</p>
+
+			<div class= "answers">
+				<div class="nut"> <button value= "A" >A. Ronaldo de Lima </button></div>
+				<div class="nut"> <button value= "B" class= "rightanswer" >B. Alessandro Del Piero </button></div>
+				<div class="nut"> <button value= "C" >C. Gabriel Batistuta </button></div>
+				<div class="nut"> <button value= "D" >D. Roberto Baggio </button></div>
+			</div>
+
+			<button class= "chuyen" id="button6" ><img src="img/icon2.png"></button>
+		</div>
+
+		<audio autoplay>
+			<source src= "audio_basic.mp3" type="audio/mpeg"></source>
+		</audio>
+	</div>
+
+	<script>
+		var x=0;	
+
+		$(".nut button").click( function(){
+			$(".nut button").attr('disabled',true);
+			$(this).css("background-color","red");
+			$(this).css("color","yellow");
+			$("audio").attr("src","audio4.mp3");
+		});	
+
+		$(".rightanswer").click( function(){
+			x+=1;
+			$("audio").attr("src","audio3.mp3");
+		});	
+
+		$("#button1").click( function (){
+			$("#cau1").hide();
+			$("#cau2").show();
+			$("#cau2 button").attr('disabled',false);
+		});
+		$("#button2").click( function (){
+			$("#cau2").hide();
+			$("#cau3").show();
+			$("#cau3 button").attr('disabled',false);
+		});
+		$("#button3").click( function (){
+			$("#cau3").hide();
+			$("#cau4").show();
+			$("#cau4 button").attr('disabled',false);
+		});
+		$("#button4").click( function (){
+			$("#cau4").hide();
+			$("#cau5").show();
+			$("#cau5 button").attr('disabled',false);
+		});
+		$("#button5").click( function (){
+			$("#cau5").hide();
+			$("#cau6").show();
+			$("#cau6 button").attr('disabled',false);
+		});
+		$("#button6").click( function (){
+			if(x==6){
+				location.href="congrat.html"
+			}else{
+				alert("POOR YOU !!!!!!!!!!! LOSERRRRRRRRRRRRR ")
+				location.reload("home.html")
+			}
+		});
+
+		var images = ['theme1.jpg', 'theme2.jpg', 'theme3.jpg', 'theme4.jpg', 'theme5.png', 'theme6.jpg']
+		$("#theme").click( function(){
+			$("body").css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+		})
+	</script>
+
+</body>
+</html>
