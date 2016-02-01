@@ -1,0 +1,53 @@
+﻿body{
+	box-sizing: border-box;
+	background-image: url(http://mygamingtour.com/uploads/news/dota2_art___choo_kiau_ping_a_by_zen_is-d6fn6bi.jpg) 
+}
+
+#start{
+	border: 1px solid white;
+	background-color: #212821;
+	width: 500px;
+	height: 200px;
+	margin: auto;
+	color: #00D200;
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	overflow: auto;
+}
+
+#start button{
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 24px;
+	opacity: 0.8;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+#start:hover button{
+	cursor: pointer;
+
+}
+#b1:hover{
+	opacity: 1;
+	color: black;
+}
+#b2:hover{
+	opacity: 1;
+	color: black;
+}
+#b3:hover{
+	opacity: 1;
+	color: black;
+}
+
+#b1{
+	background-color: blue;
+}
+#b2{
+	background-color: orange;
+}
+#b3{
+	background-color: red;
+}

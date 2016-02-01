@@ -1,0 +1,92 @@
+﻿body{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-image: url(http://img03.deviantart.net/8ee5/i/2013/225/0/5/dota2_clash_of_heroes_1_redux__by_kunkka-d6hwt2j.jpg)
+}
+
+.card{
+	position: relative;	
+	max-width: 10%;
+	max-height: 22.5%;
+	float: left;
+	margin: 5px;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+
+.card .front{
+	transition:all 0.5s;
+	transform:rotateY(180deg);
+	opacity: 0;
+	
+}
+.card .back{
+	backface-visibility:hidden;
+	transition:all 0.5s;
+	transform: rotateY(0deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.card.flipped .back{
+	transform: rotateY(180deg);
+}
+
+.card.flipped .front{
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+.card img:hover, flipped img{
+	box-shadow:0 0 15px 5px rgba(200,240,240,.75);
+}
+.card:hover .back{
+	transform: translate(5px, -5px);
+	cursor: pointer;
+}
+
+#progressBar {
+  width: 80%;
+  margin: 10px auto;
+  height: 26px;
+  background-color: #0854B2;
+}
+
+#progressBar div {
+  height: 100%;
+  text-align: left;
+  font-weight: bold;
+  line-height: 28px;
+  color: white;
+  width: 0;
+  background-color: #07A003;
+}
+
+#result1{
+	position: relative;
+	max-width: 1000px;
+	max-height: 550px;
+	margin: auto;
+	margin-top: 50px;
+	display: none;
+}
+
+#refresh{
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	width: 80px;
+	height: 50px;
+}
+
+
+#result2{
+	max-width: 600px;
+	margin: auto;
+	display: none;
+}

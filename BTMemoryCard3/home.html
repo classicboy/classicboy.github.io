@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Game</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "css/stylehome.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class= "content">	
+		<div id= "start">
+		<p> READY ? </p>
+		<button id= "b1" > Easy </button>
+		<button id= "b2" > Normal </button>
+		<button id= "b3" > Hard </button>
+	<audio autoplay>
+	<source src= "audiohome.mp3" type="audio/mpeg"></source>
+	</audio>	
+	</div>
+	
+	<script>
+	$('#b1').click(function(){
+		location.href= 'easy.html'
+	});
+	$('#b2').click(function(){
+		location.href= 'normal.html'
+	})
+	$('#b3').click(function(){
+		location.href= 'hard.html'
+	})
+	</script>
+</body>
+</html>

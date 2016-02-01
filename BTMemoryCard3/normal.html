@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>Game</title>
+	<meta charset= "UTF-8"/>
+	<link rel= "stylesheet" type= "text/css" href= "css/stylenormal.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+	<div class="content">	
+		<audio autoplay loop>
+			<source src= "audio_basic.mp3" type="audio/mpeg"></source>
+		</audio>
+		<audio autoplay id="choose">
+		</source src= "" typle="audio/mpeg"></source>		
+	</audio>
+
+	<div id= "progressBar">
+		<div></div>
+	</div>
+
+	<div id= "result2">
+		<img src= "img/victory.jpg">
+	</div>
+
+	<div id= "result1">
+		<img src= "img/loser.jpg">
+		<div id= "refresh">
+			<button><img src= "img/icon.jpg">Try again</button>
+		</div>	
+	</div>
+</div>
+<script>
+	var cards = ['28', '27', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40'];
+	var current= null;
+	var count= 0;
+	var Time= 70;
+
+	function progress(timeleft, timetotal, $element) {
+		var progressBarWidth = timeleft * $element.width() / timetotal;
+		$element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 1000, 'linear').html(timeleft);
+		if(timeleft > 0) {
+			setTimeout(function() {
+				progress(timeleft - 1, timetotal, $element);
+			}, 1000);
+		}
+	};
+	progress(69, 69, $('#progressBar'));
+
+
+	function shuffle(array) {
+		var currentIndex = array.length, temporaryValue, randomIndex;
+		while (0 !== currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+		return array
+	}
+
+	function flip(card){
+		$(card).toggleClass('flipped');
+		$("#choose").attr("src","audio1.mp3");
+		$(card).css('pointer-events', 'none');
+		if(!current){
+			current= $(card)
+		}else{
+			if(current.attr('data-name') != $(card).attr('data-name')){
+				var abc = current;
+				current= null;
+
+				setTimeout(function(){
+					abc.toggleClass("flipped");
+					$(card).toggleClass("flipped");
+					$(card).css('pointer-events', 'auto');
+					abc.css('pointer-events', 'auto');
+				},500);
+				
+			}else{
+				var abc= current;
+				current= null;
+
+				setTimeout(function(){
+					abc.css('opacity','0');
+					$(card).css('opacity','0');
+					$("#choose").attr("src","audio.mp3");
+					$(card).css('pointer-events', 'auto');
+
+					count++;
+					if(count== 18){
+						$('.grid').css('display','none')
+						$('#progressBar').css('display','none')
+						$('#result2').css('display','block')
+						$('body').css('background-image','url("")')
+						$("#theme").attr("src","victory.mp3");
+					}
+				},500);
+			}
+		}
+	}
+
+
+	$(function() {
+		cards = cards.concat(cards);
+		cards = shuffle(cards);
+
+		var html = '';
+		for (var i=0; i<cards.length; i++){
+			html += '<div class= "grid">' +
+			'<div class= "card" data-name= "' +cards[i]+ '" onclick= "flip(this)">' + 
+			'<div class= "front"><img src="img/'+cards[i]+ '.jpg "/></div>' +
+			'<div class= "back"><img src= "img/dota.jpg"/></div>' +
+			'</div></div>'
+		};
+		$('.content').append(html);
+	});
+
+	var run = setInterval (function(){
+		Time--;
+
+		if(Time== 0){
+			clearInterval(run);
+			$('.grid').css('display','none')
+			$('#progressBar').css('display','none')
+			$('body').css('background-image','url("")')
+			if(count!=10){
+				$('#result1').css('display','block')
+				$("#theme").attr("src","loser.mp3");
+			}
+		}
+	},1000);
+
+	$('button').click(function(){
+		location.href= 'home.html';
+	})
+
+</script>
+</body>
+</html>
