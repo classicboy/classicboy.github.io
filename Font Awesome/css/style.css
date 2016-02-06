@@ -1,0 +1,115 @@
+*body{
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: maven;
+	src: url(../mavenpro-bold-webfont.eot);
+	src: url(../fonts/mavenpro-bold-webfont.woff2) format('woff2'),
+	url(../fonts/mavenpro-bold-webfont.woff) format('woff'),
+	url(../fonts/mavenpro-bold-webfont.svg) format('svg'),
+	url(../fonts/mavenpro-bold-webfont.tff) format('tff');
+}
+
+p {
+	font-family: maven, Times,serif;
+}
+
+.main{
+	width: 960px;
+	height: 2000px;
+	margin: auto;
+	background-color: rgb(201, 201, 201);
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+a{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.banner img{
+	width: 100%;
+	height: 300px;
+}
+
+.duongdan{
+	width: 22%;
+	height: 22%;
+	float: left;
+	margin: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.duongdan img{
+	width: 100%;
+	height: 100%;
+}
+
+.duongdan:hover img{
+	transform: translate(5px, -5px);
+	cursor: pointer;
+	box-shadow:0 0 15px 5px rgba(200,240,240,.75);
+}
+
+.sp{
+	margin-top: 100px;
+}
+
+#gt{
+	color: #199AC1;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+}
+
+.advertisement1{
+	max-width: 14%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.advertisement1 img{
+	width: 100%;
+}
+
+.advertisement2{
+	width: 14%;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.advertisement2 img{
+	width: 100%
+}
+@keyframes color{
+	0%   {color: red;}
+	50%  {color: yellow;}
+	100% {color: orange;}
+}
+.advertisement1 p{
+	font-size: 24px;
+	animation: color 3s linear infinite;
+}
+
+.advertisement2 p{
+	font-size: 24px;
+	animation: color 3s linear infinite;
+
+}
+.advertisement1 a{
+	color: red;
+}
+
+.advertisement2 a{
+	color: red;
+}
+span{
+	color: blue;
+	font-size: 20px;
+}

@@ -1,0 +1,27 @@
+
+.sanpham{
+	border: 1px solid rgb(201, 201, 201);
+	float:left;
+}
+
+.anh{
+	width: 30%;
+	margin: 10px;
+}
+.anh img{
+	width: 100%;
+}
+.anh p{
+	font-weight: bold;
+}
+.anh:hover img{
+	transform: scale(2) translate(200px,0);
+}
+.thongtin{
+	width: 50%;
+	margin: 20px;
+}
+.thongtin p{
+	font-size: 24px;
+	color: blue;
+}
