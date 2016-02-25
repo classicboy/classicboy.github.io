@@ -1,0 +1,22 @@
+.main{
+	width: 400px;
+	margin: auto;
+}
+.input{
+	width: 400px;
+	height: 30px;
+	margin: 5px;
+}
+
+.gioitinh:hover{
+	cursor: pointer;
+}
+
+#register{
+	width: 400px;
+	height: 50px;
+	margin-top: 20px;
+}
+#register:hover{
+	cursor: pointer;
+}
