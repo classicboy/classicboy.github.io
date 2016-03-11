@@ -1,0 +1,38 @@
+	body {
+		background: url(images/gray.jpg)no-repeat;
+		background-size: cover;
+		padding:50px 0px 30px 0px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 100%;
+	}
+
+	.main{
+		width: 1000px;
+		margin: auto;
+	}
+	.input{
+		width: 400px;
+		height: 30px;
+		margin: 5px;
+		border-radius: 10px;
+	}
+	.gioitinh{
+		width: 400px;
+	}
+
+	.gioitinh:hover{
+		cursor: pointer;
+	}
+
+	#register{
+		width: 400px;
+		height: 50px;
+		margin-top: 20px;
+	}
+	#register:hover{
+		cursor: pointer;
+	}
+
+	.error{
+		color:orange;
+	}
