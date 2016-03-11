@@ -171,6 +171,7 @@
 
 				if($("input[name=gender]:checked").length == 0){
 					$("#a").next("span").text("You are gay ?");
+					return false;
 				}
 
 				return isValid;
