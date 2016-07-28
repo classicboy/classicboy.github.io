@@ -1,0 +1,132 @@
+body{
+	background-color: #e9edef;
+	font-family: 'Roboto', sans-serif;
+}
+img{
+	max-width: 100%;
+}
+header>.row{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+#top-header{
+	background-color: white;
+}
+#loginaction ul li{
+	display: inline;
+}
+#loginaction{
+	margin-top: 15px;
+}
+#loginaction ul{
+	float: right;
+}
+#loginaction #signup{
+	border: 1px solid black;
+	border-radius: 25px;
+	padding: 5px;
+	margin-left: 15px;
+}
+#bottom-header{
+	background-image: url("../img/header-bg.png");
+}
+#bottom-header h3{
+	color: white;
+	font-weight: bold;
+	padding-bottom: 30px;
+}
+#bottom-header p{
+	color: white;
+	padding-top: 15px;
+}
+#bottom-header{
+	margin-bottom: 7.5px;
+}
+li{
+	list-style-type: none;
+}
+#sidebar{
+	padding-left: 7.5px;
+}
+#sidebar>h3{
+	margin-top: 7.5px;
+	font-size: 12px;
+	font-weight: bold;
+}
+li>a{
+	color: black;
+	font-size: 14px;
+}
+.col-lg-4{
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+	padding-right: 7.5px;
+	padding-left: 7.5px;
+}
+.col-lg-6{
+	margin-top: 7.5px;
+	margin-bottom: 7.5px;
+	padding-right: 7.5px;
+	padding-left: 7.5px;
+}
+.tieude>h3{
+	margin-bottom: 7.5px;
+	margin-top: 7.5px;
+	padding-left: 7.5px;
+}
+h3{
+	font-size: 18px;
+	color: #0f83bb;
+}
+
+.view-button{
+	margin-top: 7.5px;
+	padding-right: 7.5px;
+}
+.btn-default{
+	background-color:#821418;
+	color:white;
+	font-size:14px;
+	width: 100%;
+}
+footer{
+	margin-top: 30px;
+}
+#top-footer{
+	background-color: #2b2b2b;
+}
+#top-footer img{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.fb-google-icon{
+	float: right;
+	padding-left: 7.5px;
+}
+#bottom-footer{
+	background-color: #2b2b2b;
+}
+#bottom-footer p{
+	font-size: 12px;
+	color: white;
+}
+#bottom-footer li a{
+	color: white;
+}
+#bottom-footer h3{
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+.aboutus{
+	margin-top: 0px;
+}
+#contact{
+	text-align: center;
+	background-color: #464646;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+img:hover, flipped img{
+	box-shadow:0 0 15px 5px #418aff;
+}
