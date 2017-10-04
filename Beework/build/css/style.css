@@ -279,6 +279,12 @@ button img{
 }
 
 /*main-content for news pages*/
+.news-pages .main-content h4 a{
+	color:#666666;
+} 
+.news-pages .main-content h4 a:hover{
+	text-decoration: none;
+} 
 .main-content .pagination-bar{
 	background-color: #f3f3f3;
 }
