@@ -225,6 +225,18 @@ ul.col-md-7 li.active a{
 	text-align: left;
 }
 
+/*banner block for about page*/
+.about-page .banner{
+	background-image: url('../../build/img/bg_about.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-top:80px;
+	padding-bottom:140px;
+	color:white;
+}
+.about-page .banner .container h1{
+	text-align: left;
+}
 
 /*main-content block*/
 .main-content p{
@@ -263,19 +275,20 @@ button img{
 	background-image: url("../../build/icon/bg2.png");
 	background-position: center;
 	background-repeat: no-repeat;
+
 }
 .product-pages .main-content .background img.product-images{
 	max-height: 310px;
 	width: auto;
+}
+.product-pages .main-content .background:nth-child(2n) .col-md-6:first-child{
+	float:right;
 }
 .product-pages .main-content .background p{
 	width:90%;
 }
 .product-pages .main-content .background .container .col-md-6{
 	overflow: hidden;
-}
-.mobile{
-	display: none;
 }
 
 /*main-content for news pages*/
@@ -382,6 +395,14 @@ button img{
 	width: auto;
 	vertical-align: text-bottom;
 	margin-right:15px;
+}
+
+/*main-content for about-page*/
+.about-images{
+	box-shadow:10px 10px rgba(106, 112, 126, 0.1);
+}
+.about-page .main-content .background:nth-child(2n) .col-md-6:first-child{
+	float:right;
 }
 
 
@@ -694,19 +715,13 @@ footer .col-md-3 .col-md-6:last-child img{
 		margin-left:25%;
 	}
 
-	.pc{
-		display: none;
-	}
-	.mobile{
-		display: block;
-	}
-	.mobile .background{
+	.product-pages .main-content .background{
 		background-image: unset;
 	}
-	.mobile .row:nth-child(2n+1){
+	.product-pages .main-content .background:nth-child(2n+1){
 		background-color: #f3f3f3;
 	}
-	.mobile .row:nth-child(2n){
+	.product-pages .main-content .background:nth-child(2n){
 		background-color: #fefbf1;
 	}
 	.product-pages .main-content .background p {
