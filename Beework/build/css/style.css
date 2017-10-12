@@ -3,15 +3,15 @@ html {
 }
 @font-face {
 	font-family: normalfont;
-	src: url(../../build/font/ellefutura.ttf);
+	src: url(../../build/font/ElleFutura.ttf);
 }
 @font-face {
 	font-family: boldfont;
-	src: url(../../build/font/ellefutura-bold.ttf);
+	src: url(../../build/font/ElleFutura-Bold.ttf);
 }
 @font-face {
 	font-family: mediumfont;
-	src: url(../../build/font/ellefutura-medium.ttf);
+	src: url(../../build/font/ElleFutura-Medium.ttf);
 }
 
 .center{
