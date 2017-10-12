@@ -426,19 +426,17 @@ button img{
 }
 
 /*main-content for product-details-pages*/
-.product-details-pages .main-content{
-	background-color: #0d1113;
-}
+
 .product-details-pages .main-content p{
-	color:#cccccc;
+	color:#666666;
 }
 .product-details-pages .main-content p.big-title{
-	color:#fad043;
+	color:black;
 	font-size:86px;
 	font-weight: bold;
 }
 .product-details-pages .main-content p.title{
-	color:white;
+	color:black;
 	font-size:60px;
 	font-weight: bold;
 	margin:50px 0 30px 0;
@@ -449,6 +447,9 @@ button img{
 }
 .product-details-pages .main-content .background .right-images{
 	float:right;
+}
+.product-details-pages .main-content .background img{
+	box-shadow:10px 10px rgba(106, 112, 126, 0.1);
 }
 /*sub-footer block*/
 .sub-footer{
