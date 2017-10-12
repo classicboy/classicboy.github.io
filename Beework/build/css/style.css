@@ -241,7 +241,7 @@ ul.col-md-7 li.active a{
 
 /*banner block for product details pages*/
 .product-details-pages .banner{
-	background-image: url('../../build/img/bg_product_details.png');
+	background-image: url('../../build/img/bg_product_details.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	padding-top:80px;
