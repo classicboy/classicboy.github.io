@@ -239,6 +239,19 @@ ul.col-md-7 li.active a{
 	text-align: left;
 }
 
+/*banner block for product details pages*/
+.product-details-pages .banner{
+	background-image: url('../../build/img/bg_about.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-top:80px;
+	padding-bottom:140px;
+	color:white;
+}
+.product-details-pages .banner .container h1{
+	text-align: left;
+}
+
 /*main-content block*/
 .main-content p{
 	color:#666666;
@@ -406,7 +419,50 @@ button img{
 	float:right;
 }
 
-
+/*main-content for product-details-pages*/
+.product-details-pages .main-content{
+	background-color: #0d1113;
+}
+.product-details-pages .main-content h1{
+	text-align: left;
+	color:#fad043;
+}
+.product-details-pages .main-content h3,.product-details-pages .main-content h2{
+	text-align:left;
+	color:white;
+}
+.product-details-pages .main-content p{
+	color:white;
+}
+.product-details-pages .main-content{
+	background-image: url("../../build/img/Product1-1 copy.png");
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: top;
+}
+.product-details-pages .main-content .empty{
+	height: 500px;
+}
+.product-details-pages .main-content .background:nth-child(2){
+	margin-bottom: 200px;
+}
+.product-details-pages .main-content .background:nth-child(2) .col-md-6{
+	float: right;
+}
+.product-details-pages .main-content .background:not(:first-child) .row{
+	position: relative;
+}
+.product-details-pages .main-content .background:not(:first-child) .row .products-description{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.product-details-pages .main-content .background:nth-child(4) .row .products-description{
+	left:50%;
+}
+.product-details-pages .main-content .background .right-images{
+	float:right;
+}
 /*sub-footer block*/
 .sub-footer{
 	background-color: #333333;
