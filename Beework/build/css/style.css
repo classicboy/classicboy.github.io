@@ -279,6 +279,10 @@ button img{
 .post-details-pages .slide.galery-images{
 	display: none;
 }
+.post-details-pages h3#related-post-title{
+	text-align: left;
+	margin-left:15px;
+}
 /*main-content for product page*/
 .product-pages .main-content h3{
 	text-align: left;
@@ -566,7 +570,9 @@ footer .col-md-3 .col-md-6:last-child img{
 	.post-details-pages .row.related{
 		margin:30px -15px;
 	}
-
+	.post-details-pages h3#related-post-title{
+		margin-left:0;
+	}
 	.about-page .main-content .background:nth-child(2n+1) .row [class*="col-"]:first-child{
 		padding-left:0;
 	}
@@ -656,6 +662,9 @@ footer .col-md-3 .col-md-6:last-child img{
 	}
 	.post-details-pages .row.related{
 		margin:30px -15px;
+	}
+	.post-details-pages h3#related-post-title{
+		margin-left:0;
 	}
 	.contact-page .main-content #send-message-block button{
 		margin:15px 0 15px 0;
